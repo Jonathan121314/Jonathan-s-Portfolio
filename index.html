@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Jonathan's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rock+Salt&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/style.css">
-</head>
 <body>
-    <h1 class="text-style">Jonathan's Portfolio</h1>
-    <h2 class="text-style">I'm a Web Developer</h2>
-    <hr />
-
-    <h2 class="text-style">My projects:</h2>
-    <ol class="text-style">
-        <li>
-            <a href="./public/movie-ranking/index.html"><h3>Movie Ranking Project</h3></a>
-            <img src="./images/movie-ranking.png" alt="Movie Ranking Project image" height="200" />
-        </li>
-
-        <li>
-            <a href="./public/birthday-invite/index.html"><h3>Birthday Invite</h3></a>
-            <img src="./images/birthday-invite.png" alt="Birthday Invite image" height="200" />
-        </li>
-
-        <li>
-            <a href="./public/lord-of-the-rings-meme/index.html"><h3>Lord of the Rings Meme</h3></a>
-            <img src="./images/lord-of-the-rings-meme.png" alt="Lord of the Rings Meme image" height="200" />
-        </li>
-
-    </ol>
     
-    <hr />
-    <p class="text-style">Note: The looks of this website will continue to improve, I am a beginner in web developing.</p>
+    <h1 class="text-style">Welcome to my Website!</h1>
+        
+    <h2 class="text-style">I am Learning to be a Programmer</h2>
+
+    <div class="container">
+
+        <h3 class="text-style">My projects:</h3>
+
+        <div id="projects-container">
+            <div class="grid-items">
+                <a href="./public/movie-ranking/index.html">
+                <img class="project-imgs" src="./images/movie-ranking.png" alt="Movie Ranking Project image" />
+                <h4 class="link">Movie Ranking Project</h4>
+                </a>
+            </div>
+
+            <div class="grid-items">
+                <a href="./public/birthday-invite/index.html">
+                <img class="project-imgs" src="./images/birthday-invite.png" alt="Birthday Invite image" />
+                <h4 class="link">Birthday Invite</h4>
+                </a>
+            </div>
+
+            <div class="grid-items">
+                <a href="./public/lord-of-the-rings-meme/index.html">
+                <img class="project-imgs" src="./images/lord-of-the-rings-meme.png" alt="Lord of the Rings Meme image" />
+                <h4 class="link">Lord of the Rings Meme</h4>
+                </a>
+            </div>
+        </div>
+    
+    </div>
+    <p id="footer">Note: The looks of this website will continue to improve, I am a beginner in web development.</p>
 </body>
 </html>
