@@ -5,11 +5,17 @@ for (var i = 0; i <= (drumButtons.length - 1); i++) {
         var drum = this.classList[0];
 
         handleSound(drum);
+        buttonAnimation(drum, true);
     });
 }
 
 document.addEventListener("keydown", function(event) {
     handleSound(event.key);
+    buttonAnimation(event.key);
+});
+
+document.addEventListener("keyup", function(event) {
+    removeAnimation(event.key);
 });
 
 function handleSound(drum) {
@@ -51,4 +57,20 @@ function handleSound(drum) {
             kick.play();
             break;
     }
+}
+
+function buttonAnimation(button, wasClick=false) {
+    var buttonPressed = document.querySelector("." + button);
+    buttonPressed.classList.add("pressed");
+
+    if (wasClick === true) {
+        setTimeout(function() {
+            removeAnimation(button);
+        }, 100);
+    }
+}
+
+function removeAnimation(button) {
+    var buttonPressed = document.querySelector("." + button);
+    buttonPressed.classList.remove("pressed");
 }
